@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-task-management/static/css/main.154c0d36.css",
-    "main.js": "/react-task-management/static/js/main.2effc35b.js",
+    "main.js": "/react-task-management/static/js/main.fcf76e02.js",
     "static/js/235.c9aa1d40.chunk.js": "/react-task-management/static/js/235.c9aa1d40.chunk.js",
     "static/js/214.0f96d0f5.chunk.js": "/react-task-management/static/js/214.0f96d0f5.chunk.js",
     "static/js/806.845d70c1.chunk.js": "/react-task-management/static/js/806.845d70c1.chunk.js",
@@ -15,7 +15,7 @@
     "static/media/hamburger.svg": "/react-task-management/static/media/hamburger.f8279520cf2055c29c0ce64f1a8199e4.svg",
     "static/media/edit.svg": "/react-task-management/static/media/edit.e4d6cbc7e006857b70fac0a6519f168f.svg",
     "main.154c0d36.css.map": "/react-task-management/static/css/main.154c0d36.css.map",
-    "main.2effc35b.js.map": "/react-task-management/static/js/main.2effc35b.js.map",
+    "main.fcf76e02.js.map": "/react-task-management/static/js/main.fcf76e02.js.map",
     "235.c9aa1d40.chunk.js.map": "/react-task-management/static/js/235.c9aa1d40.chunk.js.map",
     "214.0f96d0f5.chunk.js.map": "/react-task-management/static/js/214.0f96d0f5.chunk.js.map",
     "806.845d70c1.chunk.js.map": "/react-task-management/static/js/806.845d70c1.chunk.js.map",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.154c0d36.css",
-    "static/js/main.2effc35b.js"
+    "static/js/main.fcf76e02.js"
   ]
 }
