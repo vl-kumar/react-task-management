@@ -2,11 +2,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Provider } from "react-redux";
 import { store } from "./presentation/store/store";
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { Theme, darkTheme } from "core/theme";
 import { MainContainer } from "App.style";
 import Navbar from "presentation/components/molecules/Navbar";
+import AppConfiguration from "presentation/components/templates/AppConfiguration";
 
 const HomeScreen = React.lazy(
   () => import("./presentation/screens/HomeScreen")
@@ -29,6 +30,7 @@ function App() {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <MainContainer>
+          <AppConfiguration>
           <Navbar />
           <BrowserRouter>
             <Routes>
@@ -39,6 +41,7 @@ function App() {
               <Route path="*" element={<NotFoundScreen />} />
             </Routes>
           </BrowserRouter>
+          </AppConfiguration>
         </MainContainer>
       </ThemeProvider>
     </Provider>

@@ -6,7 +6,6 @@ import AddOrEditTaskPopup from "presentation/components/molecules/AddOrEditTaskP
 
 interface TaskListProps {
   taskList: Array<Task>;
-  completedTaskList: Array<Task>;
 }
 
 const TaskList: React.FC<TaskListProps> = memo(({ taskList }) => {
