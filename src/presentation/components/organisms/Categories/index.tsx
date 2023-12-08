@@ -1,5 +1,5 @@
 import { useAppSelector } from "presentation/hooks/useAppSelector";
-import { Container, MainRow } from "./style";
+import { Container, MainRow, NoContent } from "./style";
 import { memo, useMemo, useState } from "react";
 import CategoryItem from "presentation/components/molecules/CategoryItem";
 import { Category } from "model/category";
@@ -20,9 +20,20 @@ const Categories = memo(() => {
   };
  
   const CategoryList = useMemo(() => {
-    return categoryList.map((category) => (
-      <CategoryItem category={category} editCategoryItem={editCategoryItem} />
-    ));
+    return <>
+      {categoryList.length === 0 && 
+        
+        <NoContent>
+          <h3> There is no Category. Start Adding..</h3>
+        </NoContent>
+        }
+        {
+          categoryList.map((category) => (
+            <CategoryItem category={category} editCategoryItem={editCategoryItem} />
+          ))
+        }
+    </>
+    
   }, [categoryList]);
   return (
     <Container>

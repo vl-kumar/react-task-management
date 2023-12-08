@@ -17,3 +17,13 @@ export const MainRow = styled.div((props) => ({
   maxWidth: "100%",
   paddingBottom: props.theme.spacings.sm,
 }));
+
+export const NoContent = styled.div((props) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: "100%",
+  minHeight: "70vh",
+  margin: props.theme.spacings.lg,
+}));

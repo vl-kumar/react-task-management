@@ -20,8 +20,6 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category, editCategoryItem 
 
   function editCategory() {
     editCategoryItem(category);
-    //   dispatch(editCategory({ category: { id: category.id, title: text } }));
-    //   setIsEditMode(!isEditMode)
   }
 
   return (
