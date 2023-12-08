@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktask_manager_app=self.webpackChunktask_manager_app||[]).push([[235],{235:(a,e,s)=>{s.r(e),s.d(e,{default:()=>r});var n=s(184);const r=()=>(0,n.jsx)("div",{className:"home",children:(0,n.jsx)("h3",{children:"Dashboard Screen Under Construction"})})}}]);
+//# sourceMappingURL=235.c9aa1d40.chunk.js.map
