@@ -34,8 +34,8 @@ function App() {
           <Navbar />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<HomeScreen />} />
-              <Route path="/home" element={<HomeScreen />} />
+              <Route path="/" element={<CategoriesScreen />} />
+              <Route path="/home" element={<CategoriesScreen />} />
               <Route path="/categories" element={<CategoriesScreen />} />
               <Route path="/tasks" element={<TaskListScreen />} />
               <Route path="*" element={<NotFoundScreen />} />

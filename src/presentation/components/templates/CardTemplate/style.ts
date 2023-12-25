@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div((props) => ({
-  display: "flex",
-  flexDirection: "column",
   width: `calc(100% - ${props.theme.spacings.xl})`,
   margin: "auto",
   height: "100%",

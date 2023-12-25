@@ -3,12 +3,15 @@ import TaskItem from "presentation/components/molecules/TaskItem";
 import { Task } from "model/task";
 import { Container, NoContent, TaskGrid } from "./style";
 import AddOrEditTaskPopup from "presentation/components/molecules/AddOrEditTaskPopup";
+import SearchInput from "presentation/components/molecules/SearchInput";
 
 interface TaskListProps {
   taskList: Array<Task>;
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
 }
 
-const TaskList: React.FC<TaskListProps> = memo(({ taskList }) => {
+const TaskList: React.FC<TaskListProps> = memo(({ taskList, searchTerm, setSearchTerm }) => {
   const [editTask, setEditTask] = useState<Task | undefined>(undefined);
 
   const editTaskItem = (task: Task) => {
@@ -43,6 +46,8 @@ const TaskList: React.FC<TaskListProps> = memo(({ taskList }) => {
         selectedEditTask={editTask}
         resetEditTask={resetEditTask}
       />
+      <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+
       {TaskList}
     </Container>
   );

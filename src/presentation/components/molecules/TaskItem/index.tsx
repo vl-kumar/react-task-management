@@ -53,6 +53,9 @@ const TaskItem: React.FC<TaskItemProps> = memo(({ task, editTaskItem }) => {
           <div>
             <BoldText>Last Modified:</BoldText> {task.date}
           </div>
+          <div>
+            <BoldText>Completed:</BoldText> {task.completed ? 'true': 'false'}
+          </div>
         </Content>
       </CardRow>
       <IconSection>
