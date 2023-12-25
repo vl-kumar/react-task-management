@@ -33,12 +33,12 @@ const TaskList: React.FC<TaskListProps> = memo(({ taskList, searchTerm, setSearc
 
         {taskList.length === 0 && (
           <NoContent>
-            <h3> There is no Task. Start Adding..</h3>
+            <h3> {searchTerm.length > 0 ? `There is no task matching with ${searchTerm}`: 'There is no Task. Start Adding...'}</h3>
           </NoContent>
         )}
       </>
     );
-  }, [taskList]);
+  }, [searchTerm, taskList]);
 
   return (
     <Container>

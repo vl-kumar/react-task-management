@@ -8,15 +8,12 @@ interface TaskListProps {
 }
 
 const TaskTable: React.FC<TaskListProps> = memo(({ taskList }) => {
- 
-
-
   const TaskTable = useMemo(() => {
     return (
       <>
         <table>
           <thead>
-              <TableRow isHeader={true} rowContent={taskList[0] ?? []} />
+            <TableRow isHeader={true} rowContent={taskList[0] ?? []} />
           </thead>
           <tbody>
             {taskList.map((rowContent, rowID) => (
@@ -34,11 +31,7 @@ const TaskTable: React.FC<TaskListProps> = memo(({ taskList }) => {
     );
   }, [taskList]);
 
-  return (
-    <Container>
-      {TaskTable}
-    </Container>
-  );
+  return <Container>{TaskTable}</Container>;
 });
 
 export default TaskTable;

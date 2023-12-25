@@ -11,5 +11,6 @@ export const Container = styled.div((props) => ({
   marginBottom: props.theme.spacings.xmd,
 
   borderRadius: props.theme.spacings.sm,
-  overflowY: 'auto'
+  overflowY: 'auto',
+  paddingBottom: props.theme.spacings.lg,
 }));

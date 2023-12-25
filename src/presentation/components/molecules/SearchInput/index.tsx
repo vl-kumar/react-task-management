@@ -27,7 +27,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
         type="search"
         name="search-form"
         className="search-input"
-        placeholder="Search for..."
+        placeholder="Search for Task..."
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
       />

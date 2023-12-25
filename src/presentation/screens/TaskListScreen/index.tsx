@@ -12,7 +12,7 @@ function TaskListScreen() {
 
   const [totalPageCount, setTotalPageCount] = useState<number>(5);
   const [pageSize, setPageSize] = useState<number>(5);
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [searchTerm, setSearchTerm] = useState<string>("");
   const [taskList, setTaskList] = useState<Array<Task>>([]);
 
   useEffect(() => {
@@ -20,23 +20,29 @@ function TaskListScreen() {
     setTotalPageCount(Math.ceil(tasks.length / pageSize));
   }, [tasks, pageSize]);
 
-  useEffect(()=>{
+  useEffect(() => {
     const taskData = tasks.filter((data) => {
-      if(JSON.stringify(data).toLowerCase().includes(searchTerm.toLowerCase()) ) {
-        return data
+      if (
+        JSON.stringify(data).toLowerCase().includes(searchTerm.toLowerCase())
+      ) {
+        return data;
       }
-    })
+    });
 
-    if(taskData.length > 0) {
-      setTaskList(taskData)
+    if (taskData.length > 0) {
+      setTaskList(taskData);
       setTotalPageCount(Math.ceil(taskData.length / pageSize));
       setCurrentPage(1);
+    } else if (taskData.length === 0 && searchTerm.length > 0) {
+      setTaskList([]);
+      setCurrentPage(1);
+      setTotalPageCount(1);
     } else {
       setTaskList(tasks);
       setTotalPageCount(Math.ceil(tasks.length / pageSize));
       setCurrentPage(1);
     }
-  }, [tasks, searchTerm, pageSize])
+  }, [tasks, searchTerm, pageSize]);
 
   useEffect(() => {
     applyTaskFilter();
@@ -44,7 +50,7 @@ function TaskListScreen() {
   }, [currentPage, totalPageCount]);
 
   const applyTaskFilter = useCallback(() => {
-    const filterArray =  searchTerm.length > 0 ? taskList: tasks
+    const filterArray = searchTerm.length > 0 ? taskList : tasks;
 
     const array = filterArray.slice(
       (currentPage - 1) * pageSize,
@@ -71,10 +77,13 @@ function TaskListScreen() {
   return (
     <div className="container">
       <CardTemplate>
-        <TaskList taskList={taskList} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+        <TaskList
+          taskList={taskList}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
         {PaginationElement}
         <TaskTable taskList={taskList} />
-
       </CardTemplate>
     </div>
   );
